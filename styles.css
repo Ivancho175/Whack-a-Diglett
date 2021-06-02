@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+:root {
+    --eerie-black: #1C1C1C;
+    --pullman-brown: #6A4504;
+    --brown: #865B15;
+    --khaki-web: #C8B89E;
+    --cultured: #EFEFEF;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: var(--brown);
+    color: var(--khaki-web);
+}
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: var(--pullman-brown);
+    color: var(--khaki-web);
+    text-align: center;
+    border-bottom: 1px solid var(--khaki-web);
+}
+header h1 {
+    font-size: 3.4rem;
+}
+header h1:before {
+    content: ' ';
+    background-image: url('https://i.ibb.co/WxNFkYy/diglett.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 30px;
+    height: auto;
+    margin-right: 15px;
+}
+header p {
+    font-size: 1.8rem;
+    font-style: italic;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px auto auto auto;
+    width: 600px;
+}
+.square {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-color: var(--pullman-brown);
+}
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    width: 618px;
+    height: 618px;
+}
