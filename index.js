@@ -1,6 +1,4 @@
-const { default: Swal } = require("sweetalert2");
-
-const square = document.querySelectorAll('.square');
+const squares = document.querySelectorAll('.square');
 const mole = document.querySelector('.mole');
 const timeLeft = document.querySelectorAll('#time-left');
 let score = document.querySelector('#score');
@@ -34,7 +32,7 @@ squares.forEach(square => {
 
 function moveMole() {
     timerId = setInterval(randomSquare, 500)
-};
+},
 
 moveMole();
 
