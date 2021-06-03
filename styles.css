@@ -55,17 +55,82 @@ main {
     margin: 50px auto auto auto;
     width: 600px;
 }
+main .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+main .stats h2 {
+    font-size: 1.8rem;
+}
+main .stats h3 {
+    font-size: 3.4rem;
+}
+main .stats .time-remaining {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+main .stats .score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
 .square {
     width: 200px;
     height: 200px;
     border-style: solid;
     border-color: var(--pullman-brown);
+    cursor: pointer;
 }
 .grid {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
+    background-image: url('https://i.ibb.co/CJfywLZ/backGrid.jpg');
+    background-size: 33%;
     width: 618px;
     height: 618px;
+}
+.mole {
+    background-image: url('https://i.ibb.co/WxNFkYy/diglett.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 0 30px;
+    color: var(--cultured);
+    background-color: var(--pullman-brown);
+    border-top: 1px solid var(--khaki-web);
+}
+footer p {
+    margin: 2rem auto;
+}
+footer .right-text {
+    margin-right: 15px;
+}
+footer i {
+    vertical-align: middle;
+}
+footer a {
+    color: var(--eerie-black);
+    text-decoration: none;
+}
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }

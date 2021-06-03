@@ -17,14 +17,15 @@
         <p>by Ivancho175</p>
     </header>
     <main>
-
-        <div class="score">
-            <h2>Your Score:</h2>
-            <h2 id="score">0</h2>
-        </div>
-        <div class="time-remaining">
-            <h2>Seconds left:</h2>
-            <h2 id="time-left">60</h2>
+        <div class="stats">
+            <div class="score">
+                <h2>Your Score:</h2>
+                <h3 id="score">0</h3>
+            </div>
+            <div class="time-remaining">
+                <h2>Seconds left:</h2>
+                <h3 id="time-left">60</h3>
+            </div>
         </div>
 
         <div class="grid">
@@ -32,15 +33,25 @@
             <div class="square" id="2"></div>
             <div class="square" id="3"></div>
             <div class="square" id="4"></div>
-            <div class="square" id="5"></div>
+            <div class="square mole" id="5"></div>
             <div class="square" id="6"></div>
             <div class="square" id="7"></div>
             <div class="square" id="8"></div>
             <div class="square" id="9"></div>
         </div>
     </main>
-    <footer></footer>
-    <script src="index.js" charset="UTF-8"></script>
+    <footer>
+        <p class="right-text">
+          A sample of classic Whack-a-Mole game with our favorite pokemon: Diglett. Made with HTML, CSS and JavaScript.
+        </p>
+        <p>
+          &copy; Created by
+          <a href="https://codepen.io/ivancho175/" target="_blank"
+            >@ivancho175</a> <i class="fab fa-free-code-camp"></i
+          >
+        </p>
+    </footer>
+    <script src="./index.js" charset="UTF-8"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.all.min.js"></script>
 </body>
