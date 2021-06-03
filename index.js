@@ -1,59 +1,59 @@
-const squares = document.querySelectorAll('.square');
-const mole = document.querySelector('.mole');
-const timeLeft = document.querySelectorAll('#time-left');
-let score = document.querySelector('#score');
+const squares = document.querySelectorAll('.square')
+const mole = document.querySelector('.mole')
+const timeLeft = document.querySelector('#time-left')
+let score = document.querySelector('#score')
 
-let result = 0;
-let hitPosition;
-let currentTime = 60;
-let timerId = null;
+let result = 0
+let hitPosition
+let currentTime = 60
+let timerId = null
 
 function randomSquare() {
     squares.forEach(square => {
         square.classList.remove('mole')
     })
 
-    let randomSquare = squares[Math.floor(Math.random() * 9)];
+    let randomSquare = squares[Math.floor(Math.random() * 9)]
     randomSquare.classList.add('mole')
 
     //assign the id of the randomPosition to hitPosition for use to use later
     hitPosition = randomSquare.id
-};
+}
 
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPosition) {
-            result ++,
-            score.textContent = result,
+            result ++
+            score.textContent = result
             hitPosition = null
         }
     })
-}),
+})
 
 function moveMole() {
     timerId = setInterval(randomSquare, 500)
-},
+}
 
-moveMole();
+moveMole()
 
 function countDown() {
-    currentTime--,
+    currentTime--
     timeLeft.textContent = currentTime
 
     if (currentTime == 0) {
-        clearInterval(countDownTimerId),
-        clearInterval(timerId),
+        clearInterval(countDownTimerId)
+        clearInterval(timerId)
         Swal.fire({
-            icon: 'succes',
+            icon: 'success',
             title: 'Game finished',
-            text: 'Your final score is' + result,
+            text: 'Your final score is' + ' ' + result,
+            allowOutsideClick: false,
             showConfirmButton: false,
-            timer: 3000,
-        }),
+            timer: 5000,
+        })
         window.setTimeout(function() {
             location.reload();
-        }, 3000)
+        }, 5000)
     }
-};
-let countDownTimerId = setInterval(countDown, 1000);
-console.log('Hola rainmundo y todo el mundo');
+}
+let countDownTimerId = setInterval(countDown, 1000)
