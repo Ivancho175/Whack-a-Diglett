@@ -94,6 +94,7 @@ main .stats .score {
     background-size: 33%;
     width: 618px;
     height: 618px;
+    border-radius: 10px;
 }
 .mole {
     background-image: url('https://i.ibb.co/WxNFkYy/diglett.png');
